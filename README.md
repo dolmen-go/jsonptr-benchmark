@@ -3,13 +3,13 @@
 
 ## Results
 
-| lib                   | speed       | allocs       | alloc size |
-|-----------------------|------------:|-------------:|-----------:|
-| dolmen-go/jsonptr     |   108 ns/op |  0 allocs/op |     0 B/op |
-| dustin/go-jsonpointer |   289 ns/op |  1 allocs/op |    48 B/op |
-| xeipuuv/gojsonpointer |   402 ns/op |  1 allocs/op |    48 B/op |
-| mickep76/jsonptr      |   580 ns/op |  4 allocs/op |    67 B/op |
-| lestrrat/go-jspointer |  1271 ns/op |  9 allocs/op |   272 B/op |
+| package                                         | speed       | allocs       | alloc size |
+|-------------------------------------------------|------------:|-------------:|-----------:|
+| [dolmen-go/jsonptr](/dolmen-go/jsonptr)         |   108 ns/op |  0 allocs/op |     0 B/op |
+| [dustin/go-jsonpointer](/dustin/go-jsonpointer) |   289 ns/op |  1 allocs/op |    48 B/op |
+| [xeipuuv/gojsonpointer](/xeipuuv/gojsonpointer) |   402 ns/op |  1 allocs/op |    48 B/op |
+| [mickep76/jsonptr](/mickep76/jsonptr)           |   580 ns/op |  4 allocs/op |    67 B/op |
+| [lestrrat/go-jspointer](lestrrat/go-jspointer)  |  1271 ns/op |  9 allocs/op |   272 B/op |
 
 ## Run
 
