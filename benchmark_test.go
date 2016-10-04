@@ -1,0 +1,50 @@
+package benchmark
+
+import (
+	"errors"
+	"testing"
+)
+
+type GetImpl interface {
+	Get(document interface{}, pointer string) (interface{}, error)
+}
+
+type SetImpl interface {
+	GetImpl
+	Set(document *interface{}, pointer string, value interface{}) error
+}
+
+var errSetRoot = errors.New("This implementation doesn't handle replacing the document root")
+
+var implementations = map[string]GetImpl{
+	"dolmen-go/jsonptr":     DolmenGoJsonPtr{},
+	"xeipuuv/gojsonpointer": XeipuuvGoJsonPointer{},
+	"mickep76/jsonptr":      Mickep76JsonPtr{},
+	"lestrrat/go-jspointer": LestrratGoJsPointer{},
+	"dustin/go-jsonpointer": DustinGoJsonPointer{},
+}
+
+func BenchmarkGet(b *testing.B) {
+	doc := map[string]interface{}{
+		"foo": map[string]interface{}{
+			"bar": []interface{}{
+				true,
+				nil,
+				false,
+			},
+		},
+	}
+	for name, impl := range implementations {
+		b.Run("["+name+"]", func(b *testing.B) {
+			for i := 0; i < b.N; i++ {
+				res, err := impl.Get(doc, "/foo/bar/2")
+				if err != nil {
+					b.FailNow()
+				}
+				if res != false {
+					b.FailNow()
+				}
+			}
+		})
+	}
+}
