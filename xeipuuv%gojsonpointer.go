@@ -26,3 +26,8 @@ func (d XeipuuvGoJsonPointer) Set(pdoc *interface{}, pointer string, value inter
 	_, err = ptr.Set(*pdoc, value)
 	return err
 }
+
+func (d XeipuuvGoJsonPointer) Parse(pointer string) (Stringer, error) {
+	ptr, err := gojsonpointer.NewJsonPointer(pointer)
+	return &ptr, err
+}

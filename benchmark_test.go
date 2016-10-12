@@ -22,6 +22,20 @@ var implementations = map[string]GetImpl{
 	"rnd42/go-jsonpointer":  Rnd42JSONPointer{},
 }
 
+type Parser interface {
+	Parse(pointer string) (Stringer, error)
+}
+
+var parsers = make(map[string]Parser)
+
+func init() {
+	for name, impl := range implementations {
+		if impl, ok := impl.(Parser); ok {
+			parsers[name] = impl
+		}
+	}
+}
+
 func BenchmarkGet(b *testing.B) {
 	doc := map[string]interface{}{
 		"foo": map[string]interface{}{

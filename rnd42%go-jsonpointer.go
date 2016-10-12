@@ -22,3 +22,7 @@ func (d Rnd42JSONPointer) Set(pdoc *interface{}, pointer string, value interface
 	*pdoc, err = ptr.Set(*pdoc, value, -1)
 	return err
 }
+
+func (d Rnd42JSONPointer) Parse(pointer string) (Stringer, error) {
+	return jsonpointer.NewJSONPointerFromString(pointer)
+}

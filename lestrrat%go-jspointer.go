@@ -24,3 +24,7 @@ func (d LestrratGoJsPointer) Set(pdoc *interface{}, pointer string, value interf
 	}
 	return ptr.Set(*pdoc, value)
 }
+
+func (d LestrratGoJsPointer) Parse(pointer string) (Stringer, error) {
+	return jspointer.New(pointer)
+}
