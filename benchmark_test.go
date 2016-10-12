@@ -1,7 +1,6 @@
 package benchmark
 
 import (
-	"errors"
 	"testing"
 )
 
@@ -13,8 +12,6 @@ type SetImpl interface {
 	GetImpl
 	Set(document *interface{}, pointer string, value interface{}) error
 }
-
-var errSetRoot = errors.New("This implementation doesn't handle replacing the document root")
 
 var implementations = map[string]GetImpl{
 	"dolmen-go/jsonptr":     DolmenGoJsonPtr{},
