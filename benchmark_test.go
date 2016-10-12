@@ -22,15 +22,15 @@ var implementations = map[string]GetImpl{
 	"rnd42/go-jsonpointer":  Rnd42JSONPointer{},
 }
 
-type Parser interface {
+type PointerParser interface {
 	Parse(pointer string) (Stringer, error)
 }
 
-var parsers = make(map[string]Parser)
+var parsers = make(map[string]PointerParser)
 
 func init() {
 	for name, impl := range implementations {
-		if impl, ok := impl.(Parser); ok {
+		if impl, ok := impl.(PointerParser); ok {
 			parsers[name] = impl
 		}
 	}
@@ -59,4 +59,70 @@ func BenchmarkGet(b *testing.B) {
 			}
 		})
 	}
+}
+
+var pointers = []string{
+	"/foo/bar",
+	"/foo/bar/baz/~0~1",
+}
+
+func benchmarkParsers(b *testing.B, f func(func(string) (Stringer, error), string) func(*testing.B)) {
+	for _, pointer := range pointers {
+		b.Run(`"`+pointer+`"`, func(b *testing.B) {
+			for name, p := range parsers {
+				f2 := f(p.Parse, pointer)
+				if f2 == nil {
+					continue
+				}
+				b.Run("["+name+"]", func(b *testing.B) {
+					for i := 0; i < b.N; i++ {
+						f2(b)
+					}
+				})
+			}
+		})
+	}
+}
+
+func BenchmarkParse(b *testing.B) {
+	benchmarkParsers(b, func(Parse func(string) (Stringer, error), pointer string) func(*testing.B) {
+		// Returns the body of the benchmark: parsing the given pointer
+		return func(*testing.B) {
+			_, _ = Parse(pointer)
+		}
+	})
+}
+
+func BenchmarkBackToString(b *testing.B) {
+	benchmarkParsers(b, func(Parse func(string) (Stringer, error), pointer string) func(*testing.B) {
+		// Parse the pointer, but before starting the benchmark
+		ptr, err := Parse(pointer)
+		if err != nil {
+			b.FailNow()
+		}
+		// Returns the body of the benchmark: formatting the given pointer
+		return func(b *testing.B) {
+			out := ptr.String()
+			if out != pointer {
+				b.FailNow()
+			}
+		}
+	})
+}
+
+func BenchmarkParseAndBackToString(b *testing.B) {
+	benchmarkParsers(b, func(Parse func(string) (Stringer, error), pointer string) func(*testing.B) {
+		// Parse the pointer, but before starting the benchmark
+		// Returns the body of the benchmark: formatting the given pointer
+		return func(b *testing.B) {
+			ptr, err := Parse(pointer)
+			if err != nil {
+				b.FailNow()
+			}
+			out := ptr.String()
+			if out != pointer {
+				b.FailNow()
+			}
+		}
+	})
 }
