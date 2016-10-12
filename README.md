@@ -3,6 +3,8 @@
 
 ## Results
 
+### 2016-10-05 (outdated)
+
 | package                                                           | speed       | allocs       | alloc size |
 |-------------------------------------------------------------------|------------:|-------------:|-----------:|
 | [dolmen-go/jsonptr](https://github.com/dolmen-go/jsonptr)         |   108 ns/op |  0 allocs/op |     0 B/op |
