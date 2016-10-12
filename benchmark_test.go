@@ -19,6 +19,7 @@ var implementations = map[string]GetImpl{
 	"mickep76/jsonptr":      Mickep76JsonPtr{},
 	"lestrrat/go-jspointer": LestrratGoJsPointer{},
 	"dustin/go-jsonpointer": DustinGoJsonPointer{},
+	"rnd42/go-jsonpointer":  Rnd42JSONPointer{},
 }
 
 func BenchmarkGet(b *testing.B) {
