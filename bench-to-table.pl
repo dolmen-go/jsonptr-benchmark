@@ -14,6 +14,6 @@ EOF
 while (<>) {
     next unless /^B/;
     chomp;
-    my @cols = split /\s+/;
+    my @cols = split /\s\s+/;
     print '| ', join(' | ', @cols), " |\n";
 }
