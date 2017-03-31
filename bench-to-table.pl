@@ -49,6 +49,7 @@ EOF
 
 foreach $bench (@benchs) {
     my ($name, $results, $bests) = @{$bench}{qw<name results bests>};
+    $name =~ s/~/\\~/g;
     foreach my $impl (sort keys %$results) {
         my $result = $results->{$impl};
         print '| ', $name, ' | ', $impl, ' | ',
