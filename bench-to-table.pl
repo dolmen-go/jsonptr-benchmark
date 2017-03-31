@@ -7,13 +7,14 @@ use strict;
 use warnings;
 
 print <<EOF;
-| Benchmark | op | speed | allocs bytes | allocs count |
-| --- | ---: | ---: | ---: | ---: |
+| Benchmark | impl | op | speed | allocs bytes | allocs count |
+| --- | --- | ---: | ---: | ---: | ---: |
 EOF
 
 while (<>) {
     next unless /^B/;
     chomp;
     my @cols = split /\s\s+/;
+    unshift @cols, (shift @cols) =~ m{^(.+)/\[([^]]+)};
     print '| ', join(' | ', @cols), " |\n";
 }
