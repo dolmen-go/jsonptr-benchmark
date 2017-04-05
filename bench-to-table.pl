@@ -42,13 +42,14 @@ while (<>) {
     $results->{$impl} = [ @cols[2..4] ];
 }
 
-print <<EOF;
-| Benchmark | impl | speed | allocs bytes | allocs count |
-| --- | --- | ---: | ---: | ---: |
+my $header = <<EOF;
+| Impl | speed | allocs bytes | allocs count |
+| --- | ---: | ---: | ---: |
 EOF
 
 foreach $bench (@benchs) {
     my ($name, $results, $bests) = @{$bench}{qw<name results bests>};
+    print "#### $name\n\n$header";
     $name =~ s/~/\\~/g;
     my $min_score = 2;
     foreach my $impl (sort keys %$results) {
@@ -63,7 +64,8 @@ foreach $bench (@benchs) {
             }
             push @cols, "$bold$result->[$_]$bold";
         }
-        print '| ', join(' | ', $name, ($score >= $min_score ? "**$impl**" : $impl), @cols), " |\n";
+        print '| ', join(' | ', ($score >= $min_score ? "**$impl**" : $impl), @cols), " |\n";
         $min_score = $score if $score > $min_score;
     }
+    print "\n";
 }
