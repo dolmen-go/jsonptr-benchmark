@@ -50,9 +50,20 @@ EOF
 foreach $bench (@benchs) {
     my ($name, $results, $bests) = @{$bench}{qw<name results bests>};
     $name =~ s/~/\\~/g;
+    my $min_score = 2;
     foreach my $impl (sort keys %$results) {
         my $result = $results->{$impl};
-        print '| ', $name, ' | ', $impl, ' | ',
-            join(' | ', map { my $bold = $result->[$_] eq $bests->[2*$_+1] ? '**' : ''; "$bold$result->[$_]$bold" } 0..2), " |\n";
+        my $score = 0;
+        my @cols;
+        for (0..2) {
+            my $bold = '';
+            if ($result->[$_] eq $bests->[2*$_+1]) {
+                $bold = '**';
+                $score++;
+            }
+            push @cols, "$bold$result->[$_]$bold";
+        }
+        print '| ', join(' | ', $name, ($score >= $min_score ? "**$impl**" : $impl), @cols), " |\n";
+        $min_score = $score if $score > $min_score;
     }
 }
