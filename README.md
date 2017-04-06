@@ -33,7 +33,7 @@
 | rnd42/go-jsonpointer | 461 ns/op | 104 B/op | 3 allocs/op |
 | **xeipuuv/gojsonpointer** | **209 ns/op** | **64 B/op** | **2 allocs/op** |
 
-#### BenchmarkParse/"/foo/bar/baz/~0~1"
+#### BenchmarkParse/"/foo/bar/baz/\~0\~1"
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |
@@ -51,7 +51,7 @@
 | **rnd42/go-jsonpointer** | **7.83 ns/op** | **0 B/op** | **0 allocs/op** |
 | xeipuuv/gojsonpointer | 126 ns/op | 16 B/op | 2 allocs/op |
 
-#### BenchmarkBackToString/"/foo/bar/baz/~0~1"
+#### BenchmarkBackToString/"/foo/bar/baz/\~0\~1"
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |
@@ -69,7 +69,7 @@
 | rnd42/go-jsonpointer | 459 ns/op | 104 B/op | **3 allocs/op** |
 | **xeipuuv/gojsonpointer** | **337 ns/op** | **80 B/op** | 4 allocs/op |
 
-#### BenchmarkParseAndBackToString/"/foo/bar/baz/~0~1"
+#### BenchmarkParseAndBackToString/"/foo/bar/baz/\~0\~1"
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |

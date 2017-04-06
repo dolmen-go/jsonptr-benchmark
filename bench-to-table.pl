@@ -49,7 +49,8 @@ EOF
 
 foreach $bench (@benchs) {
     my ($name, $results, $bests) = @{$bench}{qw<name results bests>};
-    print "#### $name\n\n$header";
+    (my $name_esc = $name) =~ s/~/\\~/g;
+    print "#### $name_esc\n\n$header";
     $name =~ s/~/\\~/g;
     my $min_score = 2;
     foreach my $impl (sort keys %$results) {
