@@ -11,45 +11,79 @@
 
 ## Results
 
-### 2017-03-31
+### 2017-04-05
 
-| Benchmark | impl | speed | allocs bytes | allocs count |
-| --- | --- | ---: | ---: | ---: |
-| BenchmarkGet | dolmen-go/jsonptr | **86.7 ns/op** | **0 B/op** | **0 allocs/op** |
-| BenchmarkGet | dustin/go-jsonpointer | 274 ns/op | 48 B/op | 1 allocs/op |
-| BenchmarkGet | lestrrat/go-jspointer | 1240 ns/op | 272 B/op | 9 allocs/op |
-| BenchmarkGet | mickep76/jsonptr | 572 ns/op | 67 B/op | 4 allocs/op |
-| BenchmarkGet | rnd42/go-jsonpointer | 617 ns/op | 128 B/op | 3 allocs/op |
-| BenchmarkGet | xeipuuv/gojsonpointer | 385 ns/op | 48 B/op | 1 allocs/op |
-| BenchmarkParse/"/foo/bar" | dolmen-go/jsonptr | 243 ns/op | **64 B/op** | **2 allocs/op** |
-| BenchmarkParse/"/foo/bar" | lestrrat/go-jspointer | 439 ns/op | 128 B/op | 4 allocs/op |
-| BenchmarkParse/"/foo/bar" | rnd42/go-jsonpointer | 459 ns/op | 104 B/op | 3 allocs/op |
-| BenchmarkParse/"/foo/bar" | xeipuuv/gojsonpointer | **206 ns/op** | **64 B/op** | **2 allocs/op** |
-| BenchmarkParse/"/foo/bar/baz/\~0\~1" | dolmen-go/jsonptr | 398 ns/op | 98 B/op | 3 allocs/op |
-| BenchmarkParse/"/foo/bar/baz/\~0\~1" | lestrrat/go-jspointer | 848 ns/op | 234 B/op | 9 allocs/op |
-| BenchmarkParse/"/foo/bar/baz/\~0\~1" | rnd42/go-jsonpointer | 1001 ns/op | 170 B/op | 7 allocs/op |
-| BenchmarkParse/"/foo/bar/baz/\~0\~1" | xeipuuv/gojsonpointer | **296 ns/op** | **96 B/op** | **2 allocs/op** |
-| BenchmarkBackToString/"/foo/bar" | dolmen-go/jsonptr | 111 ns/op | 24 B/op | 2 allocs/op |
-| BenchmarkBackToString/"/foo/bar" | lestrrat/go-jspointer | 11.6 ns/op | **0 B/op** | **0 allocs/op** |
-| BenchmarkBackToString/"/foo/bar" | rnd42/go-jsonpointer | **7.80 ns/op** | **0 B/op** | **0 allocs/op** |
-| BenchmarkBackToString/"/foo/bar" | xeipuuv/gojsonpointer | 127 ns/op | 16 B/op | 2 allocs/op |
-| BenchmarkBackToString/"/foo/bar/baz/\~0\~1" | dolmen-go/jsonptr | 159 ns/op | 64 B/op | 2 allocs/op |
-| BenchmarkBackToString/"/foo/bar/baz/\~0\~1" | lestrrat/go-jspointer | 11.3 ns/op | **0 B/op** | **0 allocs/op** |
-| BenchmarkBackToString/"/foo/bar/baz/\~0\~1" | rnd42/go-jsonpointer | **7.91 ns/op** | **0 B/op** | **0 allocs/op** |
-| BenchmarkBackToString/"/foo/bar/baz/\~0\~1" | xeipuuv/gojsonpointer | 208 ns/op | 64 B/op | 3 allocs/op |
-| BenchmarkParseAndBackToString/"/foo/bar" | dolmen-go/jsonptr | 373 ns/op | 88 B/op | 4 allocs/op |
-| BenchmarkParseAndBackToString/"/foo/bar" | lestrrat/go-jspointer | 443 ns/op | 128 B/op | 4 allocs/op |
-| BenchmarkParseAndBackToString/"/foo/bar" | rnd42/go-jsonpointer | 463 ns/op | 104 B/op | **3 allocs/op** |
-| BenchmarkParseAndBackToString/"/foo/bar" | xeipuuv/gojsonpointer | **336 ns/op** | **80 B/op** | 4 allocs/op |
-| BenchmarkParseAndBackToString/"/foo/bar/baz/\~0\~1" | dolmen-go/jsonptr | 572 ns/op | 162 B/op | **5 allocs/op** |
-| BenchmarkParseAndBackToString/"/foo/bar/baz/\~0\~1" | lestrrat/go-jspointer | 873 ns/op | 234 B/op | 9 allocs/op |
-| BenchmarkParseAndBackToString/"/foo/bar/baz/\~0\~1" | rnd42/go-jsonpointer | 1000 ns/op | 170 B/op | 7 allocs/op |
-| BenchmarkParseAndBackToString/"/foo/bar/baz/\~0\~1" | xeipuuv/gojsonpointer | **519 ns/op** | **160 B/op** | **5 allocs/op** |
+#### BenchmarkGet
+
+| Impl | speed | allocs bytes | allocs count |
+| --- | ---: | ---: | ---: |
+| **dolmen-go/jsonptr** | **82.7 ns/op** | **0 B/op** | **0 allocs/op** |
+| dustin/go-jsonpointer | 272 ns/op | 48 B/op | 1 allocs/op |
+| lestrrat/go-jspointer | 1226 ns/op | 272 B/op | 9 allocs/op |
+| mickep76/jsonptr | 567 ns/op | 67 B/op | 4 allocs/op |
+| rnd42/go-jsonpointer | 609 ns/op | 128 B/op | 3 allocs/op |
+| xeipuuv/gojsonpointer | 386 ns/op | 48 B/op | 1 allocs/op |
+
+#### BenchmarkParse/"/foo/bar"
+
+| Impl | speed | allocs bytes | allocs count |
+| --- | ---: | ---: | ---: |
+| **dolmen-go/jsonptr** | 234 ns/op | **64 B/op** | **2 allocs/op** |
+| lestrrat/go-jspointer | 437 ns/op | 128 B/op | 4 allocs/op |
+| rnd42/go-jsonpointer | 461 ns/op | 104 B/op | 3 allocs/op |
+| **xeipuuv/gojsonpointer** | **209 ns/op** | **64 B/op** | **2 allocs/op** |
+
+#### BenchmarkParse/"/foo/bar/baz/~0~1"
+
+| Impl | speed | allocs bytes | allocs count |
+| --- | ---: | ---: | ---: |
+| dolmen-go/jsonptr | 397 ns/op | 98 B/op | 3 allocs/op |
+| lestrrat/go-jspointer | 850 ns/op | 234 B/op | 9 allocs/op |
+| rnd42/go-jsonpointer | 1001 ns/op | 170 B/op | 7 allocs/op |
+| **xeipuuv/gojsonpointer** | **288 ns/op** | **96 B/op** | **2 allocs/op** |
+
+#### BenchmarkBackToString/"/foo/bar"
+
+| Impl | speed | allocs bytes | allocs count |
+| --- | ---: | ---: | ---: |
+| dolmen-go/jsonptr | 107 ns/op | 24 B/op | 2 allocs/op |
+| **lestrrat/go-jspointer** | 11.4 ns/op | **0 B/op** | **0 allocs/op** |
+| **rnd42/go-jsonpointer** | **7.83 ns/op** | **0 B/op** | **0 allocs/op** |
+| xeipuuv/gojsonpointer | 126 ns/op | 16 B/op | 2 allocs/op |
+
+#### BenchmarkBackToString/"/foo/bar/baz/~0~1"
+
+| Impl | speed | allocs bytes | allocs count |
+| --- | ---: | ---: | ---: |
+| dolmen-go/jsonptr | 158 ns/op | 64 B/op | 2 allocs/op |
+| **lestrrat/go-jspointer** | 11.7 ns/op | **0 B/op** | **0 allocs/op** |
+| **rnd42/go-jsonpointer** | **7.83 ns/op** | **0 B/op** | **0 allocs/op** |
+| xeipuuv/gojsonpointer | 211 ns/op | 64 B/op | 3 allocs/op |
+
+#### BenchmarkParseAndBackToString/"/foo/bar"
+
+| Impl | speed | allocs bytes | allocs count |
+| --- | ---: | ---: | ---: |
+| dolmen-go/jsonptr | 349 ns/op | 88 B/op | 4 allocs/op |
+| lestrrat/go-jspointer | 452 ns/op | 128 B/op | 4 allocs/op |
+| rnd42/go-jsonpointer | 459 ns/op | 104 B/op | **3 allocs/op** |
+| **xeipuuv/gojsonpointer** | **337 ns/op** | **80 B/op** | 4 allocs/op |
+
+#### BenchmarkParseAndBackToString/"/foo/bar/baz/~0~1"
+
+| Impl | speed | allocs bytes | allocs count |
+| --- | ---: | ---: | ---: |
+| dolmen-go/jsonptr | 571 ns/op | 162 B/op | **5 allocs/op** |
+| lestrrat/go-jspointer | 864 ns/op | 234 B/op | 9 allocs/op |
+| rnd42/go-jsonpointer | 1017 ns/op | 170 B/op | 7 allocs/op |
+| **xeipuuv/gojsonpointer** | **513 ns/op** | **160 B/op** | **5 allocs/op** |
+
 
 ## Run
 
-```go
-go test -bench . -benchmem
+```sh
+go test -bench . -benchmem | tee bench.txt
+perl ./bench-to-table.pl < bench.txt > bench.md
 ```
 
 ## License
