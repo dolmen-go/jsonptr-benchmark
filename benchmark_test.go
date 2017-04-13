@@ -63,8 +63,11 @@ func BenchmarkGet(b *testing.B) {
 }
 
 var pointers = []string{
-	"/foo/bar",
-	"/foo/bar/baz/~0~1",
+	// "/foo/bar",
+	// "/foo/bar/baz/~0~1",
+	"/definitions/Location",
+	"/path/~1home~1dolmen",
+	"/path/~0~1dolmen",
 }
 
 func benchmarkParsers(b *testing.B, f func(func(string) (Stringer, error), string) func(*testing.B)) {
