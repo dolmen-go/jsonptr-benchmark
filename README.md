@@ -15,7 +15,7 @@
 
 ### 2017-10-18
 
-#### BenchmarkGet
+#### Get
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |
@@ -27,7 +27,7 @@
 | twindagger/jsonptr | 406 ns/op | 144 B/op | 3 allocs/op |
 | xeipuuv/gojsonpointer | 301 ns/op | 48 B/op | **1 allocs/op** |
 
-#### BenchmarkParse/"/foo/bar"
+#### Parse `"/definitions/Location"`
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |
@@ -37,7 +37,25 @@
 | twindagger/jsonptr | 343 ns/op | 112 B/op | 3 allocs/op |
 | **xeipuuv/gojsonpointer** | **146 ns/op** | **64 B/op** | **2 allocs/op** |
 
-#### BenchmarkParse/"/foo/bar/baz/\~0\~1"
+#### Parse `"/path/\~1home\~1dolmen"`
+
+| Impl | speed | allocs bytes | allocs count |
+| --- | ---: | ---: | ---: |
+| dolmen-go/jsonptr | 337 ns/op | 80 B/op | 3 allocs/op |
+| lestrrat/go-jspointer | 625 ns/op | 160 B/op | 6 allocs/op |
+| rnd42/go-jsonpointer | 803 ns/op | 160 B/op | 5 allocs/op |
+| **xeipuuv/gojsonpointer** | **214 ns/op** | **64 B/op** | **2 allocs/op** |
+
+#### Parse `"/path/\~0\~1dolmen"`
+
+| Impl | speed | allocs bytes | allocs count |
+| --- | ---: | ---: | ---: |
+| dolmen-go/jsonptr | 326 ns/op | 72 B/op | 3 allocs/op |
+| lestrrat/go-jspointer | 687 ns/op | 176 B/op | 8 allocs/op |
+| rnd42/go-jsonpointer | 867 ns/op | 160 B/op | 7 allocs/op |
+| **xeipuuv/gojsonpointer** | **209 ns/op** | **64 B/op** | **2 allocs/op** |
+
+#### BackToString `"/definitions/Location"`
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |
@@ -47,7 +65,7 @@
 | twindagger/jsonptr | 666 ns/op | 186 B/op | 7 allocs/op |
 | **xeipuuv/gojsonpointer** | **165 ns/op** | **96 B/op** | **2 allocs/op** |
 
-#### BenchmarkBackToString/"/foo/bar"
+#### BackToString `"/path/\~1home\~1dolmen"`
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |
@@ -57,7 +75,7 @@
 | twindagger/jsonptr | 340 ns/op | 64 B/op | 4 allocs/op |
 | xeipuuv/gojsonpointer | 119 ns/op | 16 B/op | 2 allocs/op |
 
-#### BenchmarkBackToString/"/foo/bar/baz/\~0\~1"
+#### BackToString `"/path/\~0\~1dolmen"`
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |
@@ -67,7 +85,16 @@
 | twindagger/jsonptr | 532 ns/op | 160 B/op | 9 allocs/op |
 | xeipuuv/gojsonpointer | 146 ns/op | 64 B/op | 3 allocs/op |
 
-#### BenchmarkParseAndBackToString/"/foo/bar"
+#### ParseAndBackToString `"/definitions/Location"`
+
+| Impl | speed | allocs bytes | allocs count |
+| --- | ---: | ---: | ---: |
+| dolmen-go/jsonptr | 463 ns/op | 144 B/op | 5 allocs/op |
+| lestrrat/go-jspointer | 483 ns/op | **128 B/op** | 4 allocs/op |
+| **rnd42/go-jsonpointer** | 524 ns/op | **128 B/op** | **3 allocs/op** |
+| **xeipuuv/gojsonpointer** | **394 ns/op** | **128 B/op** | 4 allocs/op |
+
+#### ParseAndBackToString `"/path/\~1home\~1dolmen"`
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |
@@ -77,7 +104,7 @@
 | twindagger/jsonptr | 839 ns/op | 176 B/op | 7 allocs/op |
 | xeipuuv/gojsonpointer | 255 ns/op | **80 B/op** | 4 allocs/op |
 
-#### BenchmarkParseAndBackToString/"/foo/bar/baz/\~0\~1"
+#### ParseAndBackToString `"/path/\~0\~1dolmen"`
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |

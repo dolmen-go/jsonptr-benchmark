@@ -49,9 +49,9 @@ EOF
 
 foreach $bench (@benchs) {
     my ($name, $results, $bests) = @{$bench}{qw<name results bests>};
-    (my $name_esc = $name) =~ s/~/\\~/g;
+    (my $name_esc = substr($name, 9)) =~ s/~/\\~/g;
+    $name_esc = join(' ', map { $_ =~ /^"/ ? "`$_`" : $_} $name_esc =~ m{([^"/]+|"[^"]*")}g);
     print "#### $name_esc\n\n$header";
-    $name =~ s/~/\\~/g;
     my $min_score = 2;
     foreach my $impl (sort keys %$results) {
         my $result = $results->{$impl};
