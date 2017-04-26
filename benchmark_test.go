@@ -47,16 +47,20 @@ func BenchmarkGet(b *testing.B) {
 			},
 		},
 	}
+	const ptr = "/foo/bar/2"
 	for name, impl := range implementations {
+		// Check the implementation
+		res, err := impl.Get(doc, ptr)
+		if err != nil {
+			b.FailNow()
+		}
+		if res != false {
+			b.FailNow()
+		}
+
 		b.Run("["+name+"]", func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
-				res, err := impl.Get(doc, "/foo/bar/2")
-				if err != nil {
-					b.FailNow()
-				}
-				if res != false {
-					b.FailNow()
-				}
+				res, err = impl.Get(doc, ptr)
 			}
 		})
 	}
