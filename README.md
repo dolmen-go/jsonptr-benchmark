@@ -8,6 +8,8 @@
 * [xeipuuv/gojsonpointer](https://github.com/xeipuuv/gojsonpointer)
 * [mickep76/jsonptr](https://github.com/mickep76/jsonptr)
 * [lestrrat/go-jspointer](https://github.com/lestrrat/go-jspointer)
+* [rnd42/go-jsonpointer](https://github.com/rnd42/go-jsonpointer)
+* [twindagger/jsonptr](https://github.com/twindagger/jsonptr)
 
 ## Results
 
