@@ -20,6 +20,7 @@ var implementations = map[string]GetImpl{
 	"lestrrat/go-jspointer": LestrratGoJsPointer{},
 	"dustin/go-jsonpointer": DustinGoJsonPointer{},
 	"rnd42/go-jsonpointer":  Rnd42JSONPointer{},
+	"twindagger/jsonptr": TwindaggerJSONPtr{},
 }
 
 type PointerParser interface {
