@@ -15,6 +15,8 @@
 
 ### 2018-03-01 (go1.10 linux/amd64)
 
+(See also [latest results on Travis-CI](https://travis-ci.org/dolmen-go/jsonptr-benchmark))
+
 #### Get
 
 | Impl | speed | allocs bytes | allocs count |
