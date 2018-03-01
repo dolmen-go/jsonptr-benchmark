@@ -121,6 +121,7 @@
 ## Run
 
 ```sh
+dep ensure
 go test -bench . -benchmem | tee bench.txt
 perl ./bench-to-table.pl < bench.txt > bench.md
 ```
