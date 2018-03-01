@@ -3,3 +3,6 @@ language: go
 go:
 - "1.10"
 - tip
+
+script:
+- go test -bench . -benchmem
