@@ -14,7 +14,7 @@ func (TwindaggerJSONPtr) Set(pdoc *interface{}, pointer string, value interface{
 	if pointer == "" {
 		return errSetRoot
 	}
-	return jsonptr.Set(pdoc, pointer, value)
+	return jsonptr.Set(*pdoc, pointer, value)
 }
 
 func (TwindaggerJSONPtr) Parse(pointer string) (Stringer, error) {
