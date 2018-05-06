@@ -7,6 +7,17 @@ use strict;
 use warnings;
 
 
+my %func_to_row;
+open my $f, '<', 'benchmark_test.go' or die;
+while (<$f>) {
+	if (/^func (Benchmark[^(]+)/) {
+		$func_to_row{$1} = $.
+	}
+}
+close $f;
+
+
+
 my $bench = '';
 my @benchs;
 my ($bests, $results);
@@ -50,7 +61,11 @@ EOF
 foreach $bench (@benchs) {
     my ($name, $results, $bests) = @{$bench}{qw<name results bests>};
     (my $name_esc = substr($name, 9)) =~ s/~/\\~/g;
-    $name_esc = join(' ', map { $_ =~ /^"/ ? "`$_`" : $_} $name_esc =~ m{([^"/]+|"[^"]*")}g);
+    my @parts = map { $_ =~ /^"/ ? "`$_`" : $_} $name_esc =~ m{([^"/]+|"[^"]*")}g;
+    if (defined(my $r = $func_to_row{"Benchmark$parts[0]"})) {
+        $parts[0] = '['.$parts[0].']('.'benchmark_test.go#L'.$r.')';
+    }
+    $name_esc = join(' ', @parts);
     print "#### $name_esc\n\n$header";
     my $min_score = 2;
     foreach my $impl (sort keys %$results) {
