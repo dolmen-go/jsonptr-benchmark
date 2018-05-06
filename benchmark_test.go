@@ -20,14 +20,14 @@ var implementations = map[string]GetImpl{
 	"lestrrat/go-jspointer": LestrratGoJsPointer{},
 	"dustin/go-jsonpointer": DustinGoJsonPointer{},
 	"rnd42/go-jsonpointer":  Rnd42JSONPointer{},
-	"twindagger/jsonptr": TwindaggerJSONPtr{},
+	"twindagger/jsonptr":    TwindaggerJSONPtr{},
 }
 
 type PointerParser interface {
 	Parse(pointer string) (Stringer, error)
 }
 
-var parsers = make(map[string]PointerParser)
+var parsers = make(map[string]PointerParser, len(implementations))
 
 func init() {
 	for name, impl := range implementations {
