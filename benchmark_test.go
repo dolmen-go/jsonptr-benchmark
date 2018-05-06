@@ -21,6 +21,7 @@ var implementations = map[string]GetImpl{
 	"dustin/go-jsonpointer": DustinGoJsonPointer{},
 	"rnd42/go-jsonpointer":  Rnd42JSONPointer{},
 	"twindagger/jsonptr":    TwindaggerJSONPtr{},
+	"qri-io/jsonpointer":    QriIoJSONPointer{},
 }
 
 type PointerParser interface {

@@ -39,6 +39,12 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/qri-io/jsonpointer"
+  packages = ["."]
+  revision = "168dd9e45cf211412d024e09e0358ee9297e7574"
+
+[[projects]]
+  branch = "master"
   name = "github.com/rnd42/go-jsonpointer"
   packages = ["."]
   revision = "0480215403db768c5bf6db30d82908043c58422c"
@@ -58,6 +64,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "9cd3f84cf2267fbab260858e48ea1fb45a29ad4433a7d925cdc5e631bfbabc1b"
+  inputs-digest = "a9dc135af2ecf32a7e86aab19745e73336ce18134d6cf8edd55b9cf1a0e41411"
   solver-name = "gps-cdcl"
   solver-version = 1

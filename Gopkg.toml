@@ -43,6 +43,10 @@
 
 [[constraint]]
   branch = "master"
+  name = "github.com/qri-io/jsonpointer"
+
+[[constraint]]
+  branch = "master"
   name = "github.com/rnd42/go-jsonpointer"
 
 [[constraint]]
