@@ -6,7 +6,7 @@ import (
 
 type LestrratGoJsPointer struct{}
 
-func (d LestrratGoJsPointer) Get(doc interface{}, pointer string) (interface{}, error) {
+func (LestrratGoJsPointer) Get(doc interface{}, pointer string) (interface{}, error) {
 	ptr, err := jspointer.New(pointer)
 	if err != nil {
 		return nil, err
@@ -14,7 +14,7 @@ func (d LestrratGoJsPointer) Get(doc interface{}, pointer string) (interface{}, 
 	return ptr.Get(doc)
 }
 
-func (d LestrratGoJsPointer) Set(pdoc *interface{}, pointer string, value interface{}) error {
+func (LestrratGoJsPointer) Set(pdoc *interface{}, pointer string, value interface{}) error {
 	ptr, err := jspointer.New(pointer)
 	if err != nil {
 		return err
@@ -25,6 +25,6 @@ func (d LestrratGoJsPointer) Set(pdoc *interface{}, pointer string, value interf
 	return ptr.Set(*pdoc, value)
 }
 
-func (d LestrratGoJsPointer) Parse(pointer string) (Stringer, error) {
+func (LestrratGoJsPointer) Parse(pointer string) (Stringer, error) {
 	return jspointer.New(pointer)
 }

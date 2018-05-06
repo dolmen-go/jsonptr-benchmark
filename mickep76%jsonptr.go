@@ -6,6 +6,6 @@ import (
 
 type Mickep76JsonPtr struct{}
 
-func (d Mickep76JsonPtr) Get(doc interface{}, pointer string) (interface{}, error) {
+func (Mickep76JsonPtr) Get(doc interface{}, pointer string) (interface{}, error) {
 	return jsonptr.Resolve(doc, pointer)
 }

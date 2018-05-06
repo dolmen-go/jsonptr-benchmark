@@ -6,7 +6,7 @@ import (
 
 type Rnd42JSONPointer struct{}
 
-func (d Rnd42JSONPointer) Get(doc interface{}, pointer string) (interface{}, error) {
+func (Rnd42JSONPointer) Get(doc interface{}, pointer string) (interface{}, error) {
 	ptr, err := jsonpointer.NewJSONPointerFromString(pointer)
 	if err != nil {
 		return nil, err
@@ -14,7 +14,7 @@ func (d Rnd42JSONPointer) Get(doc interface{}, pointer string) (interface{}, err
 	return ptr.Get(doc, -1)
 }
 
-func (d Rnd42JSONPointer) Set(pdoc *interface{}, pointer string, value interface{}) error {
+func (Rnd42JSONPointer) Set(pdoc *interface{}, pointer string, value interface{}) error {
 	ptr, err := jsonpointer.NewJSONPointerFromString(pointer)
 	if err != nil {
 		return err
@@ -23,6 +23,6 @@ func (d Rnd42JSONPointer) Set(pdoc *interface{}, pointer string, value interface
 	return err
 }
 
-func (d Rnd42JSONPointer) Parse(pointer string) (Stringer, error) {
+func (Rnd42JSONPointer) Parse(pointer string) (Stringer, error) {
 	return jsonpointer.NewJSONPointerFromString(pointer)
 }

@@ -6,7 +6,7 @@ import (
 
 type DustinGoJsonPointer struct{}
 
-func (d DustinGoJsonPointer) Get(doc interface{}, pointer string) (interface{}, error) {
+func (DustinGoJsonPointer) Get(doc interface{}, pointer string) (interface{}, error) {
 	switch doc := doc.(type) {
 	case map[string]interface{}:
 		return jsonpointer.Get(doc, pointer), nil

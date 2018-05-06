@@ -6,7 +6,7 @@ import (
 
 type XeipuuvGoJsonPointer struct{}
 
-func (d XeipuuvGoJsonPointer) Get(doc interface{}, pointer string) (interface{}, error) {
+func (XeipuuvGoJsonPointer) Get(doc interface{}, pointer string) (interface{}, error) {
 	ptr, err := gojsonpointer.NewJsonPointer(pointer)
 	if err != nil {
 		return nil, err
@@ -15,7 +15,7 @@ func (d XeipuuvGoJsonPointer) Get(doc interface{}, pointer string) (interface{},
 	return res, err
 }
 
-func (d XeipuuvGoJsonPointer) Set(pdoc *interface{}, pointer string, value interface{}) error {
+func (XeipuuvGoJsonPointer) Set(pdoc *interface{}, pointer string, value interface{}) error {
 	ptr, err := gojsonpointer.NewJsonPointer(pointer)
 	if err != nil {
 		return err
@@ -27,7 +27,7 @@ func (d XeipuuvGoJsonPointer) Set(pdoc *interface{}, pointer string, value inter
 	return err
 }
 
-func (d XeipuuvGoJsonPointer) Parse(pointer string) (Stringer, error) {
+func (XeipuuvGoJsonPointer) Parse(pointer string) (Stringer, error) {
 	ptr, err := gojsonpointer.NewJsonPointer(pointer)
 	return &ptr, err
 }
