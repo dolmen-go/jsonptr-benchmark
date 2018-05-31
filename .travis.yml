@@ -4,5 +4,10 @@ go:
 - "1.10"
 - tip
 
+go_import_path: github.com/dolmen-go/jsonptr-benchmark
+
+before_install:
+- go list
+
 script:
 - go test -bench . -benchmem
