@@ -3,67 +3,96 @@
 
 [[projects]]
   branch = "master"
+  digest = "1:5d9f570fb08c09f7daf81f13b1a7e4f697107ace654f9276bceb22b50f9167d6"
   name = "github.com/dolmen-go/jsonptr"
   packages = ["."]
-  revision = "1c352ec474fc378d7dfa4115433ef13d0276b526"
+  pruneopts = "UT"
+  revision = "ad143ce557ba72a10ebc42eaac7de8823ef577f9"
 
 [[projects]]
   branch = "master"
+  digest = "1:efe7dc6d12119a36c1a617b574e99ac9c5ca8fbff57eb283a60462552b7c782a"
   name = "github.com/dustin/go-jsonpointer"
   packages = ["."]
+  pruneopts = "UT"
   revision = "ba0abeacc3dcca5b9b20f31509c46794edbc9965"
 
 [[projects]]
   branch = "master"
+  digest = "1:07263fbfa1c038e890b410f730279aa7adc217180f1c2f78c6dc80b3bbe9e819"
   name = "github.com/dustin/gojson"
   packages = ["."]
+  pruneopts = "UT"
   revision = "2e71ec9dd5adce3b168cd0dbde03b5cc04951c30"
 
 [[projects]]
   branch = "master"
+  digest = "1:e2c448f794759c5954c4fa5c979a818200727840686f97d438a302057843644a"
   name = "github.com/lestrrat/go-jspointer"
   packages = ["."]
+  pruneopts = "UT"
   revision = "d5f7c71bfd03c8e9489a636874cd106c22d3a47c"
 
 [[projects]]
   branch = "master"
+  digest = "1:c5b5e16eae533be5dad530f626c881eea7db2ecf283c11a18e7d9b3fd850abda"
   name = "github.com/lestrrat/go-structinfo"
   packages = ["."]
+  pruneopts = "UT"
   revision = "8204d40bbcd79eb7603cd4c2c998e60eb2479ded"
 
 [[projects]]
   branch = "master"
+  digest = "1:a14b2525870ee7529f84c2032e6f3dc6e0c305d0f6749f9ac404737aa3090df3"
   name = "github.com/mickep76/jsonptr"
   packages = ["."]
+  pruneopts = "UT"
   revision = "36a99d961a6f7387de3e13b13981ccf35ea2224a"
 
 [[projects]]
   branch = "master"
+  digest = "1:5c2a27ad86055c82f9434390adc731d0398ff8f49abe0738dc658c0a67d1ec1e"
   name = "github.com/qri-io/jsonpointer"
   packages = ["."]
+  pruneopts = "UT"
   revision = "168dd9e45cf211412d024e09e0358ee9297e7574"
 
 [[projects]]
   branch = "master"
+  digest = "1:373dc2e52003bdf0c9397468da739afec5ef3bd8c697cafae8f18010b9c78099"
   name = "github.com/rnd42/go-jsonpointer"
   packages = ["."]
+  pruneopts = "UT"
   revision = "0480215403db768c5bf6db30d82908043c58422c"
 
 [[projects]]
   branch = "master"
+  digest = "1:86c6cf17bdab7c8a2d5f74428da3593915ee2899fb1a3e1d7d7e33564553a665"
   name = "github.com/twindagger/jsonptr"
   packages = ["."]
+  pruneopts = "UT"
   revision = "43d90c41ec1539905d524576a4fc5c3b46386a1d"
 
 [[projects]]
   branch = "master"
+  digest = "1:f4e5276a3b356f4692107047fd2890f2fe534f4feeb6b1fd2f6dfbd87f1ccf54"
   name = "github.com/xeipuuv/gojsonpointer"
   packages = ["."]
+  pruneopts = "UT"
   revision = "4e3ac2762d5f479393488629ee9370b50873b3a6"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "a9dc135af2ecf32a7e86aab19745e73336ce18134d6cf8edd55b9cf1a0e41411"
+  input-imports = [
+    "github.com/dolmen-go/jsonptr",
+    "github.com/dustin/go-jsonpointer",
+    "github.com/lestrrat/go-jspointer",
+    "github.com/mickep76/jsonptr",
+    "github.com/qri-io/jsonpointer",
+    "github.com/rnd42/go-jsonpointer",
+    "github.com/twindagger/jsonptr",
+    "github.com/xeipuuv/gojsonpointer",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
