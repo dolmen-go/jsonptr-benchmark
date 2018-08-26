@@ -6,13 +6,20 @@ go:
 - 1.10.x
 
 env:
-# Force use of go.mod for dependencies on Go 1.11
-- GO111MODULE=on
+  global:
+  # Force use of go.mod for dependencies on Go 1.11
+  - GO111MODULE=on
+
+os:
+- linux
+- osx
 
 go_import_path: github.com/dolmen-go/jsonptr-benchmark
 
 before_install:
-- go list
+- GO111MODULE=off go list  # Verify that go_import_path is ok for go < 1.11
+
+install:
 # Download runtime dependencies and test dependencies
 - "if [[ `go version` = 'go version go1.1'[1-9][.\\ ]* ]]; then go list -test -mod=readonly ; else go get -t -v ./... ; fi"
 
