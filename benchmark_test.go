@@ -14,14 +14,15 @@ type SetImpl interface {
 }
 
 var implementations = map[string]GetImpl{
-	"dolmen-go/jsonptr":     DolmenGoJsonPtr{},
-	"xeipuuv/gojsonpointer": XeipuuvGoJsonPointer{},
-	"mickep76/jsonptr":      Mickep76JsonPtr{},
-	"lestrrat/go-jspointer": LestrratGoJsPointer{},
-	"dustin/go-jsonpointer": DustinGoJsonPointer{},
-	"rnd42/go-jsonpointer":  Rnd42JSONPointer{},
-	"twindagger/jsonptr":    TwindaggerJSONPtr{},
-	"qri-io/jsonpointer":    QriIoJSONPointer{},
+	"dolmen-go/jsonptr":             DolmenGoJsonPtr{},
+	"xeipuuv/gojsonpointer":         XeipuuvGoJsonPointer{},
+	"mickep76/jsonptr":              Mickep76JsonPtr{},
+	"lestrrat/go-jspointer":         LestrratGoJsPointer{},
+	"dustin/go-jsonpointer":         DustinGoJsonPointer{},
+	"rnd42/go-jsonpointer":          Rnd42JSONPointer{},
+	"twindagger/jsonptr":            TwindaggerJSONPtr{},
+	"qri-io/jsonpointer":            QriIoJSONPointer{},
+	"json-validate/json-pointer-go": JsonValidateJsonPointerGo{},
 }
 
 type PointerParser interface {

@@ -5,6 +5,7 @@ require (
 	github.com/dolmen-go/jsonptr v0.0.0-20180826092722-ad143ce557ba
 	github.com/dustin/go-jsonpointer v0.0.0-20160814072949-ba0abeacc3dc
 	github.com/dustin/gojson v0.0.0-20160307161227-2e71ec9dd5ad // indirect
+	github.com/json-validate/json-pointer-go v0.1.0
 	github.com/lestrrat/go-jspointer v0.0.0-20180109105637-d5f7c71bfd03
 	github.com/lestrrat/go-structinfo v0.0.0-20180223064246-8204d40bbcd7 // indirect
 	github.com/mickep76/jsonptr v0.0.0-20160513201615-36a99d961a6f

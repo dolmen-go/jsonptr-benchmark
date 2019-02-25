@@ -26,6 +26,14 @@
   revision = "2e71ec9dd5adce3b168cd0dbde03b5cc04951c30"
 
 [[projects]]
+  digest = "1:cc836ad7f14d580a309c931e4f2d56b3bb326bb2805bfaa61f0e9b4295e42a99"
+  name = "github.com/json-validate/json-pointer-go"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "3eced830a491bc62c47c1283c67ddff3aae819da"
+  version = "v0.1.0"
+
+[[projects]]
   branch = "master"
   digest = "1:e2c448f794759c5954c4fa5c979a818200727840686f97d438a302057843644a"
   name = "github.com/lestrrat/go-jspointer"
@@ -87,6 +95,7 @@
   input-imports = [
     "github.com/dolmen-go/jsonptr",
     "github.com/dustin/go-jsonpointer",
+    "github.com/json-validate/json-pointer-go",
     "github.com/lestrrat/go-jspointer",
     "github.com/mickep76/jsonptr",
     "github.com/qri-io/jsonpointer",
