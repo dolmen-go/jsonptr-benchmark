@@ -11,11 +11,11 @@
 * [rnd42/go-jsonpointer](https://github.com/rnd42/go-jsonpointer)
 * [twindagger/jsonptr](https://github.com/twindagger/jsonptr)
 * [qri-io/jsonpointer](https://github.com/qri-io/jsonpointer)
-* [json-validate/json-pointer-go](https://json-validate/json-pointer-go)
+* [json-validate/json-pointer-go](https://github.com/json-validate/json-pointer-go)
 
 ## Results
 
-### 2019-02-25 (go1.11.5 darwin/amd64)
+### 2019-02-26 (go1.11.5 darwin/amd64)
 
 (See also [latest results on Travis-CI](https://travis-ci.org/dolmen-go/jsonptr-benchmark))
 
@@ -23,123 +23,123 @@
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |
-| **dolmen-go/jsonptr** | **111 ns/op** | **16 B/op** | **1 allocs/op** |
-| dustin/go-jsonpointer | 166 ns/op | 48 B/op | **1 allocs/op** |
+| **dolmen-go/jsonptr** | **113 ns/op** | **16 B/op** | **1 allocs/op** |
+| dustin/go-jsonpointer | 165 ns/op | 48 B/op | **1 allocs/op** |
 | json-validate/json-pointer-go | 290 ns/op | 80 B/op | 2 allocs/op |
-| lestrrat/go-jspointer | 737 ns/op | 368 B/op | 9 allocs/op |
-| mickep76/jsonptr | 275 ns/op | 64 B/op | **1 allocs/op** |
-| qri-io/jsonpointer | 413 ns/op | 48 B/op | **1 allocs/op** |
-| rnd42/go-jsonpointer | 449 ns/op | 128 B/op | 3 allocs/op |
-| twindagger/jsonptr | 390 ns/op | 144 B/op | 3 allocs/op |
-| xeipuuv/gojsonpointer | 397 ns/op | 144 B/op | 3 allocs/op |
+| lestrrat/go-jspointer | 681 ns/op | 368 B/op | 9 allocs/op |
+| mickep76/jsonptr | 268 ns/op | 64 B/op | **1 allocs/op** |
+| qri-io/jsonpointer | 383 ns/op | 48 B/op | **1 allocs/op** |
+| rnd42/go-jsonpointer | 442 ns/op | 128 B/op | 3 allocs/op |
+| twindagger/jsonptr | 383 ns/op | 144 B/op | 3 allocs/op |
+| xeipuuv/gojsonpointer | 411 ns/op | 144 B/op | 3 allocs/op |
 
 #### [Parse](benchmark_test.go#L97) `"/definitions/Location"`
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |
-| **dolmen-go/jsonptr** | 152 ns/op | **64 B/op** | **2 allocs/op** |
-| json-validate/json-pointer-go | 259 ns/op | 80 B/op | **2 allocs/op** |
-| lestrrat/go-jspointer | 320 ns/op | 240 B/op | 4 allocs/op |
-| **qri-io/jsonpointer** | 238 ns/op | **64 B/op** | **2 allocs/op** |
-| rnd42/go-jsonpointer | 354 ns/op | 128 B/op | 3 allocs/op |
-| twindagger/jsonptr | 318 ns/op | 112 B/op | 3 allocs/op |
-| **xeipuuv/gojsonpointer** | **136 ns/op** | **64 B/op** | **2 allocs/op** |
+| **dolmen-go/jsonptr** | 153 ns/op | **64 B/op** | **2 allocs/op** |
+| json-validate/json-pointer-go | 263 ns/op | 80 B/op | **2 allocs/op** |
+| lestrrat/go-jspointer | 413 ns/op | 240 B/op | 4 allocs/op |
+| **qri-io/jsonpointer** | 259 ns/op | **64 B/op** | **2 allocs/op** |
+| rnd42/go-jsonpointer | 462 ns/op | 128 B/op | 3 allocs/op |
+| twindagger/jsonptr | 1137 ns/op | 112 B/op | 3 allocs/op |
+| **xeipuuv/gojsonpointer** | **149 ns/op** | **64 B/op** | **2 allocs/op** |
 
 #### [Parse](benchmark_test.go#L97) `"/path/\~1home\~1dolmen"`
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |
 | dolmen-go/jsonptr | 216 ns/op | 80 B/op | 3 allocs/op |
-| json-validate/json-pointer-go | 384 ns/op | 112 B/op | 4 allocs/op |
-| lestrrat/go-jspointer | 304 ns/op | 240 B/op | 4 allocs/op |
-| qri-io/jsonpointer | 366 ns/op | 96 B/op | 4 allocs/op |
-| rnd42/go-jsonpointer | 589 ns/op | 160 B/op | 5 allocs/op |
-| twindagger/jsonptr | 637 ns/op | 144 B/op | 5 allocs/op |
-| **xeipuuv/gojsonpointer** | **136 ns/op** | **64 B/op** | **2 allocs/op** |
+| json-validate/json-pointer-go | 388 ns/op | 112 B/op | 4 allocs/op |
+| lestrrat/go-jspointer | 303 ns/op | 240 B/op | 4 allocs/op |
+| qri-io/jsonpointer | 435 ns/op | 96 B/op | 4 allocs/op |
+| rnd42/go-jsonpointer | 629 ns/op | 160 B/op | 5 allocs/op |
+| twindagger/jsonptr | 434 ns/op | 144 B/op | 5 allocs/op |
+| **xeipuuv/gojsonpointer** | **134 ns/op** | **64 B/op** | **2 allocs/op** |
 
 #### [Parse](benchmark_test.go#L97) `"/path/\~0\~1dolmen"`
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |
-| dolmen-go/jsonptr | 220 ns/op | 72 B/op | 3 allocs/op |
-| json-validate/json-pointer-go | 1092 ns/op | 128 B/op | 6 allocs/op |
-| lestrrat/go-jspointer | 275 ns/op | 224 B/op | 4 allocs/op |
-| qri-io/jsonpointer | 385 ns/op | 112 B/op | 6 allocs/op |
-| rnd42/go-jsonpointer | 631 ns/op | 160 B/op | 7 allocs/op |
-| twindagger/jsonptr | 469 ns/op | 160 B/op | 7 allocs/op |
-| **xeipuuv/gojsonpointer** | **135 ns/op** | **64 B/op** | **2 allocs/op** |
+| dolmen-go/jsonptr | 209 ns/op | 72 B/op | 3 allocs/op |
+| json-validate/json-pointer-go | 408 ns/op | 128 B/op | 6 allocs/op |
+| lestrrat/go-jspointer | 450 ns/op | 224 B/op | 4 allocs/op |
+| qri-io/jsonpointer | 381 ns/op | 112 B/op | 6 allocs/op |
+| rnd42/go-jsonpointer | 741 ns/op | 160 B/op | 7 allocs/op |
+| twindagger/jsonptr | 498 ns/op | 160 B/op | 7 allocs/op |
+| **xeipuuv/gojsonpointer** | **131 ns/op** | **64 B/op** | **2 allocs/op** |
 
 #### [BackToString](benchmark_test.go#L106) `"/definitions/Location"`
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |
-| dolmen-go/jsonptr | 129 ns/op | 80 B/op | 3 allocs/op |
-| json-validate/json-pointer-go | 329 ns/op | 112 B/op | 4 allocs/op |
-| **lestrrat/go-jspointer** | 9.14 ns/op | **0 B/op** | **0 allocs/op** |
-| qri-io/jsonpointer | 158 ns/op | 48 B/op | 2 allocs/op |
-| **rnd42/go-jsonpointer** | **6.43 ns/op** | **0 B/op** | **0 allocs/op** |
-| twindagger/jsonptr | 320 ns/op | 112 B/op | 4 allocs/op |
+| dolmen-go/jsonptr | 131 ns/op | 80 B/op | 3 allocs/op |
+| json-validate/json-pointer-go | 315 ns/op | 112 B/op | 4 allocs/op |
+| **lestrrat/go-jspointer** | 9.28 ns/op | **0 B/op** | **0 allocs/op** |
+| qri-io/jsonpointer | 168 ns/op | 48 B/op | 2 allocs/op |
+| **rnd42/go-jsonpointer** | **5.98 ns/op** | **0 B/op** | **0 allocs/op** |
+| twindagger/jsonptr | 323 ns/op | 112 B/op | 4 allocs/op |
 | xeipuuv/gojsonpointer | 110 ns/op | 64 B/op | 2 allocs/op |
 
 #### [BackToString](benchmark_test.go#L106) `"/path/\~1home\~1dolmen"`
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |
-| dolmen-go/jsonptr | 132 ns/op | 80 B/op | 3 allocs/op |
-| json-validate/json-pointer-go | 450 ns/op | 144 B/op | 6 allocs/op |
-| **lestrrat/go-jspointer** | 9.15 ns/op | **0 B/op** | **0 allocs/op** |
-| qri-io/jsonpointer | 396 ns/op | 69 B/op | 4 allocs/op |
-| **rnd42/go-jsonpointer** | **5.97 ns/op** | **0 B/op** | **0 allocs/op** |
-| twindagger/jsonptr | 467 ns/op | 144 B/op | 6 allocs/op |
-| xeipuuv/gojsonpointer | 108 ns/op | 64 B/op | 2 allocs/op |
+| dolmen-go/jsonptr | 242 ns/op | 80 B/op | 3 allocs/op |
+| json-validate/json-pointer-go | 448 ns/op | 144 B/op | 6 allocs/op |
+| **lestrrat/go-jspointer** | 10.1 ns/op | **0 B/op** | **0 allocs/op** |
+| qri-io/jsonpointer | 258 ns/op | 69 B/op | 4 allocs/op |
+| **rnd42/go-jsonpointer** | **9.47 ns/op** | **0 B/op** | **0 allocs/op** |
+| twindagger/jsonptr | 460 ns/op | 144 B/op | 6 allocs/op |
+| xeipuuv/gojsonpointer | 110 ns/op | 64 B/op | 2 allocs/op |
 
 #### [BackToString](benchmark_test.go#L106) `"/path/\~0\~1dolmen"`
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |
-| dolmen-go/jsonptr | 92.5 ns/op | 32 B/op | 2 allocs/op |
-| json-validate/json-pointer-go | 476 ns/op | 144 B/op | 8 allocs/op |
-| **lestrrat/go-jspointer** | 8.92 ns/op | **0 B/op** | **0 allocs/op** |
-| qri-io/jsonpointer | 291 ns/op | 80 B/op | 6 allocs/op |
-| **rnd42/go-jsonpointer** | **6.30 ns/op** | **0 B/op** | **0 allocs/op** |
-| twindagger/jsonptr | 781 ns/op | 144 B/op | 8 allocs/op |
-| xeipuuv/gojsonpointer | 103 ns/op | 32 B/op | 2 allocs/op |
+| dolmen-go/jsonptr | 94.0 ns/op | 32 B/op | 2 allocs/op |
+| json-validate/json-pointer-go | 468 ns/op | 144 B/op | 8 allocs/op |
+| **lestrrat/go-jspointer** | 10.2 ns/op | **0 B/op** | **0 allocs/op** |
+| qri-io/jsonpointer | 287 ns/op | 80 B/op | 6 allocs/op |
+| **rnd42/go-jsonpointer** | **5.92 ns/op** | **0 B/op** | **0 allocs/op** |
+| twindagger/jsonptr | 492 ns/op | 144 B/op | 8 allocs/op |
+| xeipuuv/gojsonpointer | 104 ns/op | 32 B/op | 2 allocs/op |
 
 #### [ParseAndBackToString](benchmark_test.go#L123) `"/definitions/Location"`
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |
-| dolmen-go/jsonptr | 288 ns/op | 144 B/op | 5 allocs/op |
-| json-validate/json-pointer-go | 683 ns/op | 192 B/op | 6 allocs/op |
-| lestrrat/go-jspointer | 329 ns/op | 240 B/op | 4 allocs/op |
-| qri-io/jsonpointer | 860 ns/op | **112 B/op** | 4 allocs/op |
-| rnd42/go-jsonpointer | 377 ns/op | 128 B/op | **3 allocs/op** |
-| twindagger/jsonptr | 1014 ns/op | 224 B/op | 7 allocs/op |
-| xeipuuv/gojsonpointer | **252 ns/op** | 128 B/op | 4 allocs/op |
+| dolmen-go/jsonptr | 466 ns/op | 144 B/op | 5 allocs/op |
+| json-validate/json-pointer-go | 609 ns/op | 192 B/op | 6 allocs/op |
+| lestrrat/go-jspointer | 384 ns/op | 240 B/op | 4 allocs/op |
+| qri-io/jsonpointer | 419 ns/op | **112 B/op** | 4 allocs/op |
+| rnd42/go-jsonpointer | 362 ns/op | 128 B/op | **3 allocs/op** |
+| twindagger/jsonptr | 1068 ns/op | 224 B/op | 7 allocs/op |
+| xeipuuv/gojsonpointer | **266 ns/op** | 128 B/op | 4 allocs/op |
 
 #### [ParseAndBackToString](benchmark_test.go#L123) `"/path/\~1home\~1dolmen"`
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |
-| dolmen-go/jsonptr | 366 ns/op | 160 B/op | 6 allocs/op |
-| json-validate/json-pointer-go | 815 ns/op | 256 B/op | 10 allocs/op |
+| dolmen-go/jsonptr | 369 ns/op | 160 B/op | 6 allocs/op |
+| json-validate/json-pointer-go | 819 ns/op | 256 B/op | 10 allocs/op |
 | lestrrat/go-jspointer | 314 ns/op | 240 B/op | **4 allocs/op** |
-| qri-io/jsonpointer | 725 ns/op | 165 B/op | 8 allocs/op |
-| rnd42/go-jsonpointer | 595 ns/op | 160 B/op | 5 allocs/op |
-| twindagger/jsonptr | 955 ns/op | 288 B/op | 11 allocs/op |
-| **xeipuuv/gojsonpointer** | **254 ns/op** | **128 B/op** | **4 allocs/op** |
+| qri-io/jsonpointer | 683 ns/op | 165 B/op | 8 allocs/op |
+| rnd42/go-jsonpointer | 597 ns/op | 160 B/op | 5 allocs/op |
+| twindagger/jsonptr | 888 ns/op | 288 B/op | 11 allocs/op |
+| **xeipuuv/gojsonpointer** | **282 ns/op** | **128 B/op** | **4 allocs/op** |
 
 #### [ParseAndBackToString](benchmark_test.go#L123) `"/path/\~0\~1dolmen"`
 
 | Impl | speed | allocs bytes | allocs count |
 | --- | ---: | ---: | ---: |
-| dolmen-go/jsonptr | 527 ns/op | 104 B/op | 5 allocs/op |
-| json-validate/json-pointer-go | 931 ns/op | 272 B/op | 14 allocs/op |
-| lestrrat/go-jspointer | 286 ns/op | 224 B/op | **4 allocs/op** |
-| qri-io/jsonpointer | 706 ns/op | 192 B/op | 12 allocs/op |
-| rnd42/go-jsonpointer | 633 ns/op | 160 B/op | 7 allocs/op |
-| twindagger/jsonptr | 1079 ns/op | 304 B/op | 15 allocs/op |
-| **xeipuuv/gojsonpointer** | **249 ns/op** | **96 B/op** | **4 allocs/op** |
+| dolmen-go/jsonptr | 471 ns/op | 104 B/op | 5 allocs/op |
+| json-validate/json-pointer-go | 1173 ns/op | 272 B/op | 14 allocs/op |
+| lestrrat/go-jspointer | 368 ns/op | 224 B/op | **4 allocs/op** |
+| qri-io/jsonpointer | 703 ns/op | 192 B/op | 12 allocs/op |
+| rnd42/go-jsonpointer | 674 ns/op | 160 B/op | 7 allocs/op |
+| twindagger/jsonptr | 1028 ns/op | 304 B/op | 15 allocs/op |
+| **xeipuuv/gojsonpointer** | **251 ns/op** | **96 B/op** | **4 allocs/op** |
 
 
 ## Run
