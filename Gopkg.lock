@@ -3,11 +3,11 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:5d9f570fb08c09f7daf81f13b1a7e4f697107ace654f9276bceb22b50f9167d6"
+  digest = "1:17cd0de2dc45ff1a5c3a9fe784a885b0a8e919638aa971ca36a974ce94d9e361"
   name = "github.com/dolmen-go/jsonptr"
   packages = ["."]
   pruneopts = "UT"
-  revision = "ad143ce557ba72a10ebc42eaac7de8823ef577f9"
+  revision = "14b4a0692fe479d7c90fd261eea20bf1aa6310d0"
 
 [[projects]]
   branch = "master"
@@ -35,19 +35,19 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:e2c448f794759c5954c4fa5c979a818200727840686f97d438a302057843644a"
-  name = "github.com/lestrrat/go-jspointer"
+  digest = "1:638bbbd3c83cf30031534203fd3d0ebe4438e2183c02628721048505255ad9c6"
+  name = "github.com/lestrrat-go/structinfo"
   packages = ["."]
   pruneopts = "UT"
-  revision = "d5f7c71bfd03c8e9489a636874cd106c22d3a47c"
+  revision = "acd51874663bf3297433cb1f1015075c3cbe6130"
 
 [[projects]]
   branch = "master"
-  digest = "1:c5b5e16eae533be5dad530f626c881eea7db2ecf283c11a18e7d9b3fd850abda"
-  name = "github.com/lestrrat/go-structinfo"
+  digest = "1:c8774ee18997a3b88e6e074cf92e71bb6ded2ac4d585bd60e0d89fc8d1b2ddfb"
+  name = "github.com/lestrrat/go-jspointer"
   packages = ["."]
   pruneopts = "UT"
-  revision = "8204d40bbcd79eb7603cd4c2c998e60eb2479ded"
+  revision = "82fadba7561c3a8d78133c2b957263c0963bb79d"
 
 [[projects]]
   branch = "master"
@@ -59,11 +59,11 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:5c2a27ad86055c82f9434390adc731d0398ff8f49abe0738dc658c0a67d1ec1e"
+  digest = "1:40976dfe28f88c4314e8d85b24caf301350ec99f9895dd4f05a58baa10d676e0"
   name = "github.com/qri-io/jsonpointer"
   packages = ["."]
   pruneopts = "UT"
-  revision = "168dd9e45cf211412d024e09e0358ee9297e7574"
+  revision = "7f104febd1fd06f0be39bd04c2ea5857fee69f1f"
 
 [[projects]]
   branch = "master"
