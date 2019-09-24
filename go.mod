@@ -1,5 +1,7 @@
 module github.com/dolmen-go/jsonptr-benchmark
 
+go 1.12
+
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dolmen-go/jsonptr v0.0.0-20181212222421-14b4a0692fe4
