@@ -1,5 +1,6 @@
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/dolmen-go/jsonptr v0.0.0-20190605225012-a9a7ae01cd7d h1:dHAlmt9T9UIIhY6kCyEfVjAT5wutEuwKX/yqm43mEos=
 github.com/dolmen-go/jsonptr v0.0.0-20190605225012-a9a7ae01cd7d/go.mod h1:GG6FAkYtUFD/rqS31kfcho/lSCed6Gqm1X0uiIEU0tA=
 github.com/dustin/go-jsonpointer v0.0.0-20160814072949-ba0abeacc3dc h1:tP7tkU+vIsEOKiK+l/NSLN4uUtkyuxc6hgYpQeCWAeI=
 github.com/dustin/go-jsonpointer v0.0.0-20160814072949-ba0abeacc3dc/go.mod h1:ORH5Qp2bskd9NzSfKqAF7tKfONsEkCarTE5ESr/RVBw=
