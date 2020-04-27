@@ -4,7 +4,7 @@ go 1.12
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/dolmen-go/jsonptr v0.0.0-20190605225012-a9a7ae01cd7d
+	github.com/dolmen-go/jsonptr v0.0.0-20200427210345-20e1608f9d85
 	github.com/dustin/go-jsonpointer v0.0.0-20160814072949-ba0abeacc3dc
 	github.com/dustin/gojson v0.0.0-20160307161227-2e71ec9dd5ad // indirect
 	github.com/json-validate/json-pointer-go v0.1.0
