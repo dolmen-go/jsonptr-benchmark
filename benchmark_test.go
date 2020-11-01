@@ -24,6 +24,7 @@ var implementations = map[string]GetImpl{
 	"qri-io/jsonpointer":            QriIoJSONPointer{},
 	"json-validate/json-pointer-go": JsonValidateJsonPointerGo{},
 	"go-openapi/jsonpointer":        GoOpenAPIJSONPointer{},
+	"yukithm/json2csv/jsonpointer":  YukithmJSON2CSVJsonPointer{},
 }
 
 type PointerParser interface {
