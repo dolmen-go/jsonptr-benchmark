@@ -23,6 +23,7 @@ var implementations = map[string]GetImpl{
 	"twindagger/jsonptr":            TwindaggerJSONPtr{},
 	"qri-io/jsonpointer":            QriIoJSONPointer{},
 	"json-validate/json-pointer-go": JsonValidateJsonPointerGo{},
+	"go-openapi/jsonpointer":        GoOpenAPIJSONPointer{},
 }
 
 type PointerParser interface {
