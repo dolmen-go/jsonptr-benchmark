@@ -12,7 +12,7 @@ require (
 	github.com/lestrrat-go/structinfo v0.0.0-20190212233437-acd51874663b // indirect
 	github.com/lestrrat/go-jspointer v0.0.0-20181205001929-82fadba7561c
 	github.com/mickep76/jsonptr v0.0.0-20160513201615-36a99d961a6f
-	github.com/qri-io/jsonpointer v0.1.0
+	github.com/qri-io/jsonpointer v0.1.1
 	github.com/rnd42/go-jsonpointer v0.0.0-20140520035338-0480215403db
 	github.com/twindagger/jsonptr v0.0.0-20160712172833-43d90c41ec15
 	github.com/xeipuuv/gojsonpointer v0.0.0-20190905194746-02993c407bfb

@@ -31,8 +31,8 @@ github.com/mickep76/jsonptr v0.0.0-20160513201615-36a99d961a6f h1:TnUpSmxEGR9lGA
 github.com/mickep76/jsonptr v0.0.0-20160513201615-36a99d961a6f/go.mod h1:0gVKAqjF4LihXeTjvlPc7ccdglT47rEO+FAwKVA+XLk=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
-github.com/qri-io/jsonpointer v0.1.0 h1:OcTtTmorodUCRc2CZhj/ZwOET8zVj6uo0ArEmzoThZI=
-github.com/qri-io/jsonpointer v0.1.0/go.mod h1:DnJPaYgiKu56EuDp8TU5wFLdZIcAnb/uH9v37ZaMV64=
+github.com/qri-io/jsonpointer v0.1.1 h1:prVZBZLL6TW5vsSB9fFHFAMBLI4b0ri5vribQlTJiBA=
+github.com/qri-io/jsonpointer v0.1.1/go.mod h1:DnJPaYgiKu56EuDp8TU5wFLdZIcAnb/uH9v37ZaMV64=
 github.com/rnd42/go-jsonpointer v0.0.0-20140520035338-0480215403db h1:Ug0ysRQpfI+bQYuPXeIknWZLAQ9Trh75K20vG2Ry1Lw=
 github.com/rnd42/go-jsonpointer v0.0.0-20140520035338-0480215403db/go.mod h1:L6fTQDE8ROasK8aBmd1dHwbX89WSEQpLd0ASF9fhtq8=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
