@@ -24,7 +24,7 @@ before_install:
 
 install:
 # Download runtime dependencies and test dependencies
-- "if [[ `go version` = 'go version go1.1'[1-9][.\\ ]* ]]; then go list -test && git diff --exit-code ; else go get -t -v ./... ; fi"
+- "if [[ `go version` = 'go version go1.1'[1-9][.\\ ]* ]]; then go list -deps . >/dev/null && git diff --exit-code ; else go get -t -v ./... ; fi"
 
 script:
 - go test -bench . -benchmem
