@@ -46,8 +46,8 @@ github.com/twindagger/jsonptr v0.0.0-20160712172833-43d90c41ec15/go.mod h1:81dTJ
 github.com/urfave/cli v1.20.0/go.mod h1:70zkFmudgCuE/ngEzBv17Jvp/497gISqfk5gWijbERA=
 github.com/xeipuuv/gojsonpointer v0.0.0-20190905194746-02993c407bfb h1:zGWFAtiMcyryUHoUjUJX0/lt1H2+i2Ka2n+D3DImSNo=
 github.com/xeipuuv/gojsonpointer v0.0.0-20190905194746-02993c407bfb/go.mod h1:N2zxlSyiKSe5eX1tZViRH5QA0qijqEDrYZiPEAiq3wU=
-github.com/yukithm/json2csv v0.0.0-20201104031003-f824443f9c2e h1:HKcTDWR0BnhYfpRsI7UAH1eHZTVg2V/8KWBMA/fkl0U=
-github.com/yukithm/json2csv v0.0.0-20201104031003-f824443f9c2e/go.mod h1:Ul6ZenFV94YeUm08AqppOd+/hB9JsmiU4KXPs9ZvgwQ=
+github.com/yukithm/json2csv v0.1.3-0.20201104031003-f824443f9c2e h1:nlRIGzX8RQ83YCpZusimboz/FEMBnkZUorLSLcvYrX0=
+github.com/yukithm/json2csv v0.1.3-0.20201104031003-f824443f9c2e/go.mod h1:Ul6ZenFV94YeUm08AqppOd+/hB9JsmiU4KXPs9ZvgwQ=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 h1:qIbj1fsPNlZgppZ+VLlY7N33q108Sa+fhmuc+sWQYwY=
 gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=

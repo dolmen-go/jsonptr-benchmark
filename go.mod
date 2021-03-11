@@ -16,5 +16,5 @@ require (
 	github.com/rnd42/go-jsonpointer v0.0.0-20140520035338-0480215403db
 	github.com/twindagger/jsonptr v0.0.0-20160712172833-43d90c41ec15
 	github.com/xeipuuv/gojsonpointer v0.0.0-20190905194746-02993c407bfb
-	github.com/yukithm/json2csv v0.0.0-20201104031003-f824443f9c2e
+	github.com/yukithm/json2csv v0.1.3-0.20201104031003-f824443f9c2e
 )
