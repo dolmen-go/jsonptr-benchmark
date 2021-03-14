@@ -13,6 +13,7 @@
 * [qri-io/jsonpointer](https://github.com/qri-io/jsonpointer)
 * [json-validate/json-pointer-go](https://github.com/json-validate/json-pointer-go)
 * [go-openapi/jsonpointer](https://github.com/go-openapi/jsonpointer)
+* [oas3/json-pointer](https://github.com/oas3/json-pointer)
 * [yukithm/json2csv/jsonpointer](https://github.com/yukithm/json2csv/tree/master/jsonpointer)
 
 ## Results

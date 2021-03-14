@@ -32,6 +32,8 @@ github.com/mickep76/jsonptr v0.0.0-20160513201615-36a99d961a6f h1:TnUpSmxEGR9lGA
 github.com/mickep76/jsonptr v0.0.0-20160513201615-36a99d961a6f/go.mod h1:0gVKAqjF4LihXeTjvlPc7ccdglT47rEO+FAwKVA+XLk=
 github.com/mitchellh/gox v1.0.1/go.mod h1:ED6BioOGXMswlXa2zxfh/xdd5QhwYliBFn9V18Ap4z4=
 github.com/mitchellh/iochan v1.0.0/go.mod h1:JwYml1nuB7xOzsp52dPpHFffvOCDupsG0QubkSMEySY=
+github.com/oas3/json-pointer v0.0.0-20200930124016-49fc53ff2dad h1:mNDllZ25FoNOjXL10KBg4FJUUaNT0zpTPBzM/PMdVhA=
+github.com/oas3/json-pointer v0.0.0-20200930124016-49fc53ff2dad/go.mod h1:GdX4U+lXqSmKkgBI51AMk4hGG43q/EExmQeYWgIWQeI=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/qri-io/jsonpointer v0.1.1 h1:prVZBZLL6TW5vsSB9fFHFAMBLI4b0ri5vribQlTJiBA=
