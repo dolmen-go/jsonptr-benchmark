@@ -1,8 +1,8 @@
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/dolmen-go/jsonptr v0.0.0-20200427210345-20e1608f9d85 h1:UehF9pCOF1JiOLmeZavootTCuimvkW7N1wggjyW4S90=
-github.com/dolmen-go/jsonptr v0.0.0-20200427210345-20e1608f9d85/go.mod h1:+6ZQtcQuiOH4ATMF+4885rhnE3FaM++MhE7m7vM302s=
+github.com/dolmen-go/jsonptr v0.0.0-20220904212016-e3f38a361346 h1:jf/eYmfxUcjQluUjN03CNdQpaspDkCINEzi2eH8zvyw=
+github.com/dolmen-go/jsonptr v0.0.0-20220904212016-e3f38a361346/go.mod h1:+6ZQtcQuiOH4ATMF+4885rhnE3FaM++MhE7m7vM302s=
 github.com/dustin/go-jsonpointer v0.0.0-20160814072949-ba0abeacc3dc h1:tP7tkU+vIsEOKiK+l/NSLN4uUtkyuxc6hgYpQeCWAeI=
 github.com/dustin/go-jsonpointer v0.0.0-20160814072949-ba0abeacc3dc/go.mod h1:ORH5Qp2bskd9NzSfKqAF7tKfONsEkCarTE5ESr/RVBw=
 github.com/dustin/gojson v0.0.0-20160307161227-2e71ec9dd5ad h1:Qk76DOWdOp+GlyDKBAG3Klr9cn7N+LcYc82AZ2S7+cA=
