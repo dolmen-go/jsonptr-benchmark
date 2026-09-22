@@ -27,8 +27,6 @@ github.com/lestrrat-go/jspointer v0.0.0-20181205001929-82fadba7561c h1:pGh5EFIfc
 github.com/lestrrat-go/jspointer v0.0.0-20181205001929-82fadba7561c/go.mod h1:xw2Gm4Mg+ST9s8fHR1VkUIyOJMJnSloRZlPQB+wyVpY=
 github.com/lestrrat-go/structinfo v0.0.0-20190212233437-acd51874663b h1:YUFRoeHK/mvRjBR0bBRDC7ZGygYchoQ8j1xMENlObro=
 github.com/lestrrat-go/structinfo v0.0.0-20190212233437-acd51874663b/go.mod h1:s2U6PowV3/Jobkx/S9d0XiPwOzs6niW3DIouw+7nZC8=
-github.com/lestrrat/go-jspointer v0.0.0-20181205001929-82fadba7561c h1:JLWbk63AGkQTdpTkA/ffVw+6jGDiqgv2Zyx12ezS9cE=
-github.com/lestrrat/go-jspointer v0.0.0-20181205001929-82fadba7561c/go.mod h1:QNUDfTLPkT8YBZrQUlk2Ppk2KrQXIZlWIhqy+0jWKf4=
 github.com/mailru/easyjson v0.7.7 h1:UGYAvKxe3sBsEDzO8ZeWOSlIQfWFlxbzLZe7hwFURr0=
 github.com/mailru/easyjson v0.7.7/go.mod h1:xzfreul335JAWq5oZzymOObrkdz5UnU4kGfJJLY9Nlc=
 github.com/mickep76/jsonptr v0.0.0-20160513201615-36a99d961a6f h1:TnUpSmxEGR9lGAtGBBptF1j2rT1YBtXeNB/dnLr5YNg=

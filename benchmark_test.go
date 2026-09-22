@@ -17,7 +17,7 @@ var implementations = map[string]GetImpl{
 	"dolmen-go/jsonptr":             DolmenGoJsonPtr{},
 	"xeipuuv/gojsonpointer":         XeipuuvGoJsonPointer{},
 	"mickep76/jsonptr":              Mickep76JsonPtr{},
-	"lestrrat/go-jspointer":         LestrratGoJsPointer{},
+	"lestrrat-go/jspointer":         LestrratGoJsPointer{},
 	"dustin/go-jsonpointer":         DustinGoJsonPointer{},
 	"rnd42/go-jsonpointer":          Rnd42JSONPointer{},
 	"twindagger/jsonptr":            TwindaggerJSONPtr{},

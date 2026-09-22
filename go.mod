@@ -8,9 +8,8 @@ require (
 	github.com/dustin/gojson v0.0.0-20160307161227-2e71ec9dd5ad // indirect
 	github.com/go-openapi/jsonpointer v0.19.6
 	github.com/json-validate/json-pointer-go v0.1.1-0.20190215082106-c4a48eafc06a
-	github.com/lestrrat-go/jspointer v0.0.0-20181205001929-82fadba7561c // indirect
+	github.com/lestrrat-go/jspointer v0.0.0-20181205001929-82fadba7561c
 	github.com/lestrrat-go/structinfo v0.0.0-20190212233437-acd51874663b // indirect
-	github.com/lestrrat/go-jspointer v0.0.0-20181205001929-82fadba7561c
 	github.com/mickep76/jsonptr v0.0.0-20160513201615-36a99d961a6f
 	github.com/oas3/json-pointer v0.0.0-20200930124016-49fc53ff2dad
 	github.com/qri-io/jsonpointer v0.1.1

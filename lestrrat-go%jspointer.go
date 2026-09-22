@@ -1,7 +1,7 @@
 package benchmark
 
 import (
-	"github.com/lestrrat/go-jspointer"
+	"github.com/lestrrat-go/jspointer"
 )
 
 type LestrratGoJsPointer struct{}
