@@ -3,6 +3,7 @@ module github.com/dolmen-go/jsonptr-benchmark
 go 1.27.0
 
 require (
+	github.com/Jeffail/gabs/v2 v2.7.0
 	github.com/chanced/jsonpointer v0.0.5
 	github.com/crhntr/jsonschema v0.0.0-dev.8
 	github.com/dolmen-go/jsonptr v1.0.2-0.20260916154834-a8c09d9edd79
