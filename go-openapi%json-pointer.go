@@ -6,7 +6,7 @@ import (
 
 type GoOpenAPIJSONPointer struct{}
 
-func (GoOpenAPIJSONPointer) Get(doc interface{}, pointer string) (interface{}, error) {
+func (GoOpenAPIJSONPointer) Get(doc any, pointer string) (any, error) {
 	ptr, err := jsonpointer.New(pointer)
 	if err != nil {
 		return nil, err
@@ -26,7 +26,7 @@ func (GoOpenAPIJSONPointer) Parse(pointer string) (Stringer, error) {
 	return &ptr, err
 }
 
-func (GoOpenAPIJSONPointer) Set(document *interface{}, pointer string, value interface{}) error {
+func (GoOpenAPIJSONPointer) Set(document *any, pointer string, value any) error {
 	ptr, err := jsonpointer.New(pointer)
 	if err != nil {
 		return err

@@ -6,7 +6,7 @@ import (
 
 type OAS3JSONPointer struct{}
 
-func (OAS3JSONPointer) Get(doc interface{}, pointer string) (interface{}, error) {
+func (OAS3JSONPointer) Get(doc any, pointer string) (any, error) {
 	ptr, err := jsonpointer.New(pointer)
 	if err != nil {
 		return nil, err
@@ -22,7 +22,7 @@ func (OAS3JSONPointer) Parse(pointer string) (Stringer, error) {
 	return &ptr, err
 }
 
-func (OAS3JSONPointer) Set(document *interface{}, pointer string, value interface{}) error {
+func (OAS3JSONPointer) Set(document *any, pointer string, value any) error {
 	ptr, err := jsonpointer.New(pointer)
 	if err != nil {
 		return err

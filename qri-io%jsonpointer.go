@@ -6,7 +6,7 @@ import (
 
 type QriIoJSONPointer struct{}
 
-func (QriIoJSONPointer) Get(doc interface{}, pointer string) (interface{}, error) {
+func (QriIoJSONPointer) Get(doc any, pointer string) (any, error) {
 	ptr, err := jsonpointer.Parse(pointer)
 	if err != nil {
 		return nil, err

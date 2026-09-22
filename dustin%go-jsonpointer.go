@@ -6,13 +6,13 @@ import (
 
 type DustinGoJsonPointer struct{}
 
-func (DustinGoJsonPointer) Get(doc interface{}, pointer string) (interface{}, error) {
+func (DustinGoJsonPointer) Get(doc any, pointer string) (any, error) {
 	switch doc := doc.(type) {
-	case map[string]interface{}:
+	case map[string]any:
 		return jsonpointer.Get(doc, pointer), nil
 	default:
 		// Wrap the document in a fake object to workaround the flawed interface
-		return jsonpointer.Get(map[string]interface{}{
+		return jsonpointer.Get(map[string]any{
 			"": doc,
 		}, "/"+pointer), nil
 	}

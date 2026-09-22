@@ -6,7 +6,7 @@ import (
 
 type YukithmJSON2CSVJsonPointer struct{}
 
-func (YukithmJSON2CSVJsonPointer) Get(doc interface{}, pointer string) (interface{}, error) {
+func (YukithmJSON2CSVJsonPointer) Get(doc any, pointer string) (any, error) {
 	return jsonpointer.Get(doc, pointer)
 }
 

@@ -6,7 +6,7 @@ import (
 
 type LestrratGoJsPointer struct{}
 
-func (LestrratGoJsPointer) Get(doc interface{}, pointer string) (interface{}, error) {
+func (LestrratGoJsPointer) Get(doc any, pointer string) (any, error) {
 	ptr, err := jspointer.New(pointer)
 	if err != nil {
 		return nil, err
@@ -14,7 +14,7 @@ func (LestrratGoJsPointer) Get(doc interface{}, pointer string) (interface{}, er
 	return ptr.Get(doc)
 }
 
-func (LestrratGoJsPointer) Set(pdoc *interface{}, pointer string, value interface{}) error {
+func (LestrratGoJsPointer) Set(pdoc *any, pointer string, value any) error {
 	ptr, err := jspointer.New(pointer)
 	if err != nil {
 		return err

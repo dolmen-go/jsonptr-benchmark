@@ -6,7 +6,7 @@ import (
 
 type JsonValidateJsonPointerGo struct{}
 
-func (JsonValidateJsonPointerGo) Get(doc interface{}, pointer string) (interface{}, error) {
+func (JsonValidateJsonPointerGo) Get(doc any, pointer string) (any, error) {
 	ptr, err := jsonpointer.New(pointer)
 	if err != nil {
 		return nil, err

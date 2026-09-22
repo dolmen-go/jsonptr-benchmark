@@ -5,12 +5,12 @@ import (
 )
 
 type GetImpl interface {
-	Get(document interface{}, pointer string) (interface{}, error)
+	Get(document any, pointer string) (any, error)
 }
 
 type SetImpl interface {
 	GetImpl
-	Set(document *interface{}, pointer string, value interface{}) error
+	Set(document *any, pointer string, value any) error
 }
 
 var implementations = map[string]GetImpl{
@@ -60,9 +60,9 @@ func init() {
 }
 
 func BenchmarkGet(b *testing.B) {
-	doc := map[string]interface{}{
-		"foo": map[string]interface{}{
-			"bar": []interface{}{
+	doc := map[string]any{
+		"foo": map[string]any{
+			"bar": []any{
 				true,
 				nil,
 				false,

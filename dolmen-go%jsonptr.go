@@ -6,11 +6,11 @@ import (
 
 type DolmenGoJsonPtr struct{}
 
-func (DolmenGoJsonPtr) Get(doc interface{}, pointer string) (interface{}, error) {
+func (DolmenGoJsonPtr) Get(doc any, pointer string) (any, error) {
 	return jsonptr.Get(doc, pointer)
 }
 
-func (DolmenGoJsonPtr) Set(pdoc *interface{}, pointer string, value interface{}) error {
+func (DolmenGoJsonPtr) Set(pdoc *any, pointer string, value any) error {
 	return jsonptr.Set(pdoc, pointer, value)
 }
 

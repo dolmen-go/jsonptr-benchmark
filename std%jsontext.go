@@ -7,7 +7,7 @@ import (
 
 type StdJsonTextPtr struct{}
 
-func (StdJsonTextPtr) Get(doc interface{}, pointer string) (interface{}, error) {
+func (StdJsonTextPtr) Get(doc any, pointer string) (any, error) {
 	panic("not implemented!")
 }
 

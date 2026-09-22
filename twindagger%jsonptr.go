@@ -6,11 +6,11 @@ import (
 
 type TwindaggerJSONPtr struct{}
 
-func (TwindaggerJSONPtr) Get(doc interface{}, pointer string) (interface{}, error) {
+func (TwindaggerJSONPtr) Get(doc any, pointer string) (any, error) {
 	return jsonptr.Get(doc, pointer)
 }
 
-func (TwindaggerJSONPtr) Set(pdoc *interface{}, pointer string, value interface{}) error {
+func (TwindaggerJSONPtr) Set(pdoc *any, pointer string, value any) error {
 	if pointer == "" {
 		return errSetRoot
 	}
