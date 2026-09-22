@@ -1,6 +1,6 @@
 module github.com/dolmen-go/jsonptr-benchmark
 
-go 1.26.0
+go 1.27.0
 
 require (
 	github.com/dolmen-go/jsonptr v1.0.2-0.20260916154834-a8c09d9edd79
