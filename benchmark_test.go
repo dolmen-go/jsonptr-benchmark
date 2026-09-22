@@ -33,6 +33,7 @@ var implementations = map[string]GetImpl{
 	"yukithm/json2csv/jsonpointer":  YukithmJSON2CSVJsonPointer{},
 	"encoding/json/jsontext":        StdJsonTextPtr{},
 	"chanced/jsonpointer":           ChancedJsonPointer{},
+	"crhntr/jsonschema/jsonptr":     CrhntrJsonSchemaJsonPtr{},
 }
 
 type PointerParser interface {

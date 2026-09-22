@@ -4,6 +4,7 @@ go 1.27.0
 
 require (
 	github.com/chanced/jsonpointer v0.0.5
+	github.com/crhntr/jsonschema v0.0.0-dev.8
 	github.com/dolmen-go/jsonptr v1.0.2-0.20260916154834-a8c09d9edd79
 	github.com/dustin/go-jsonpointer v0.0.0-20160814072949-ba0abeacc3dc
 	github.com/go-openapi/jsonpointer v1.0.2-0.20260912054107-21093919a918
