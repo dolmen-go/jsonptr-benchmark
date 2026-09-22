@@ -1,3 +1,5 @@
+github.com/chanced/jsonpointer v0.0.5 h1:N9SewxwFmdJ6QejrAhvPKjW42Olv383JeWk7PrDSd5o=
+github.com/chanced/jsonpointer v0.0.5/go.mod h1:dw54fmixEiDkp4PqNO5579oBEkwCgjrDHS3cmR70SW0=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=

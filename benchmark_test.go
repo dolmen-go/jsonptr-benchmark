@@ -26,7 +26,8 @@ var implementations = map[string]GetImpl{
 	"go-openapi/jsonpointer":        GoOpenAPIJSONPointer{},
 	"oas3/jsonpointer":              OAS3JSONPointer{},
 	"yukithm/json2csv/jsonpointer":  YukithmJSON2CSVJsonPointer{},
-	"encoding/json/jsontext":  	 StdJsonTextPtr{},
+	"encoding/json/jsontext":        StdJsonTextPtr{},
+	"chanced/jsonpointer":           ChancedJsonPointer{},
 }
 
 type PointerParser interface {

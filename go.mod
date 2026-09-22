@@ -18,6 +18,7 @@ require (
 )
 
 require (
+	github.com/chanced/jsonpointer v0.0.5 // indirect
 	github.com/dustin/gojson v0.0.0-20160307161227-2e71ec9dd5ad // indirect
 	github.com/lestrrat-go/structinfo v0.0.0-20190212233437-acd51874663b // indirect
 	github.com/stretchr/testify v1.8.0 // indirect
