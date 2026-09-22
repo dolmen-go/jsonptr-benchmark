@@ -35,6 +35,7 @@ var implementations = map[string]GetImpl{
 	"chanced/jsonpointer":           ChancedJsonPointer{},
 	"crhntr/jsonschema/jsonptr":     CrhntrJsonSchemaJsonPtr{},
 	"Jeffail/gabs/v2":               JeffailGabs{},
+	"kaptinlin/jsonpointer":         KaptinlinJSONPointer{},
 }
 
 type PointerParser interface {
