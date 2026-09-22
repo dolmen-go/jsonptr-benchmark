@@ -1,6 +1,7 @@
 package benchmark
 
 import (
+	"reflect"
 	"testing"
 )
 
@@ -11,6 +12,10 @@ type GetImpl interface {
 type SetImpl interface {
 	GetImpl
 	Set(document *any, pointer string, value any) error
+}
+
+type GetRawBytesImpl interface {
+	GetRawBytes(document []byte, pointer string) (any, error)
 }
 
 var implementations = map[string]GetImpl{
@@ -83,6 +88,39 @@ func BenchmarkGet(b *testing.B) {
 		b.Run("["+name+"]", func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
 				res, err = impl.Get(doc, ptr)
+			}
+		})
+	}
+}
+
+func BenchmarkGetRawBytes(b *testing.B) {
+	var doc = []byte(`{"foo":{"bar":[true,null,false]}}`)
+	tests := []struct {
+		Ptr      string
+		Expected any
+	}{
+		{"/foo/bar/2", false},
+	}
+	for name, impl := range implementations {
+		// Check the implementation
+		impl, ok := impl.(GetRawBytesImpl)
+		if !ok {
+			continue
+		}
+
+		test := tests[0]
+
+		res, err := impl.GetRawBytes(doc, test.Ptr)
+		if err != nil {
+			b.Errorf("%s[%s]: %v", name, test.Ptr, err)
+		}
+		if !reflect.DeepEqual(res, test.Expected) {
+			b.Errorf("%s[%s]: got %#v, expected %#v", name, test.Ptr, res, test.Expected)
+		}
+
+		b.Run("["+name+"]", func(b *testing.B) {
+			for i := 0; i < b.N; i++ {
+				res, err = impl.GetRawBytes(doc, test.Ptr)
 			}
 		})
 	}
