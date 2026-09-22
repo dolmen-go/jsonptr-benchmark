@@ -17,3 +17,11 @@ func (DustinGoJsonPointer) Get(doc any, pointer string) (any, error) {
 		}, "/"+pointer), nil
 	}
 }
+
+func (DustinGoJsonPointer) GetRawBytes(doc []byte, pointer string) (any, error) {
+	var value any
+	if err := jsonpointer.FindDecode(doc, pointer, &value); err != nil {
+		return nil, err
+	}
+	return value, nil
+}
