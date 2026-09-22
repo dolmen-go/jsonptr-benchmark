@@ -40,6 +40,21 @@ func init() {
 			parsers[name] = impl
 		}
 	}
+
+	// Filter implementations which have only Pointer, like stdlib encoding/json/jsontext
+	for name, impl := range implementations {
+		ok := func() (ok bool) {
+			defer func() {
+				recover()
+			}()
+			doc, err := impl.Get(true, "")
+			ok = err == nil && doc.(bool) == true
+			return
+		}()
+		if !ok {
+			delete(implementations, name)
+		}
+	}
 }
 
 func BenchmarkGet(b *testing.B) {
